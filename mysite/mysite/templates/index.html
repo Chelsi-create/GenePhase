@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <h2>Welcome to GenePhase</h2>
+        <h3>Upload an image of your phase diagram</h3>
+    </div>
+
+    <form action="{%url 'index'%}" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <p> {{ form.non_field_errors }} </p>
+
+        <p> {{ form.imagefield.label_tag }}
+            {{ form.imagefield.help_text }}
+        </p>
+
+        <p> {{ form.imagefile.errors }}
+            {{ form.imagefile }}
+        </p>
+
+        <p><input type="submit" name="upload_img" value="Upload"></p>
+        <p><input type="submit" name="upload_img" value="Process"></p>
+    </form>
+
+    {% if documents %}
+    <img src="{{ image_path }}" alt="">
+    {% endif %}
+</body>
+</html>
