@@ -22,7 +22,6 @@ PICS_DIR = BASE_DIR / "pic_upload"
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'f_vd@afv)d-mq$+-_jbyc3pmg*3qqg&pwe%n@=($nyx=wm$9u0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
